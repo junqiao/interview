@@ -1,0 +1,22 @@
+Latency/Consistency/Availablity
+
+Consider some prefixs are not searched before.
+
+Build trie tree and each node in trie tree will store most popular items which has the prefix. 
+
+If the size of data is too large, we need to shard the data by alphabet and use load balancer to distribute data. 
+
+
+* There are two broad categories for recommendation systems. 1. Content-based recommendation is based on similarity between products such as providing music or video recommendations by genre. Whereas collaborative filtering-based recommendations consider a user’s attributes such as browsing history, page views, clicks, preferences, etc. to deliver the recommendations. Like those suggested advertisements we mentioned earlier. 
+* Some aspects to be considered
+	'N' means 'need data feed', 'DN' means 'don\'t need data feed'.
+	** Popularity - most-viewed pages, most-purchased items, etc. DN
+	** Trending - the items that gain popularity in past several days. DN
+	** Context - the items that are viewed by the people who also viewed this item/the items that are similar to this item (by title, item category, sku, etc.). build context library. DN
+	** Tag - attach tags to user based on his/her view history and recommend based on tags. User can also select the tags they are interested in. DN
+	** Interest - for e-commerce, after user select the items they want to buy, we can recommend items based on whatever they selected. N
+
+
+
+
+
